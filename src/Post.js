@@ -4,7 +4,10 @@ const Post = () => {
   return (
     <div className="post">
       <div className="image">
-        <img src="https://techcrunch.com/wp-content/uploads/2022/12/lawnmower-Large.jpeg?w=1390&crop=1" />
+        <img
+          src="https://techcrunch.com/wp-content/uploads/2022/12/lawnmower-Large.jpeg?w=1390&crop=1"
+          alt="img"
+        />
       </div>
       <div className="texts">
         <h2>EcoFlow teases full-house battery backup coming later this year</h2>
