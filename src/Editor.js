@@ -1,6 +1,6 @@
-import React from "react";
+import ReactQuill from "react-quill";
 
-const Editor = (value, onChange) => {
+export default function Editor({ value, onChange }) {
   const modules = {
     toolbar: [
       [{ header: [1, 2, false] }],
@@ -16,10 +16,13 @@ const Editor = (value, onChange) => {
     ],
   };
   return (
-    <div>
-      <ReactQuill value={value} onChange={onChange} modules={modules} />
+    <div className="content">
+      <ReactQuill
+        value={value}
+        theme={"snow"}
+        onChange={onChange}
+        modules={modules}
+      />
     </div>
   );
-};
-
-export default Editor;
+}
