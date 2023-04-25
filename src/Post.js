@@ -1,13 +1,20 @@
-import React from "react";
 import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
 
-const Post = ({ _id, title, summary, cover, content, createdAt, author }) => {
+export default function Post({
+  _id,
+  title,
+  summary,
+  cover,
+  content,
+  createdAt,
+  author,
+}) {
   return (
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-          <img src={"http://localhost:4000/" + cover} alt="img" />
+          <img src={"http://localhost:4000/" + cover} alt="" />
         </Link>
       </div>
       <div className="texts">
@@ -22,6 +29,4 @@ const Post = ({ _id, title, summary, cover, content, createdAt, author }) => {
       </div>
     </div>
   );
-};
-
-export default Post;
+}
